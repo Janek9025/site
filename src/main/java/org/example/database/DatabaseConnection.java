@@ -13,6 +13,7 @@ public class DatabaseConnection {
         return connection;
     }
 
+
     public void connect(String filepath) throws SQLException {
         connection = DriverManager.getConnection("jdbc:sqlite:" + filepath);
         System.out.println("Udało się Połączyć!");

@@ -71,16 +71,16 @@ public class AccountManager {
     }
 
     public Account getAccount(int userID) throws SQLException {
-        int id;
+        int idAccount;
         String usernameAccount;
         PreparedStatement statement = databaseConnection.getConnection().
                 prepareStatement("SELECT * FROM accounts WHERE ID=?");
         statement.setInt(1,userID);
         ResultSet resultSet = statement.executeQuery();
         if(resultSet.next()){
-            id = resultSet.getInt(1);
+            idAccount = resultSet.getInt(1);
             usernameAccount = resultSet.getString(2);
-            return new Account(id,usernameAccount);
+            return new Account(idAccount,usernameAccount);
         } else return null;
     }
 
