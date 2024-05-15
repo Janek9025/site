@@ -29,4 +29,5 @@
             <url>https://maven.pkg.github.com/Janek9025/site</url>
         </repository>
     </distributionManagement>
+
 </project>
